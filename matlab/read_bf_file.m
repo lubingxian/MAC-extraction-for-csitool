@@ -50,10 +50,10 @@ while cur < (len - 3)
     if (code == 193) %hex2dec('c1') IWL_CONN_RX_MPDU
         bytes = fread(f, field_len-1, 'uint8=>uint8');
         if (count ~= 0)
-            mac_des = string(dec2hex(bytes(5:10)));
-            mac_src = string(dec2hex(bytes(11:16)));
-            ret{count}.MAC_Src = sprintf('%s:%s:%s:%s:%s:%s',mac_src);
-            ret{count}.MAC_Des = sprintf('%s:%s:%s:%s:%s:%s',mac_des);
+            mac_des = bytes(5:10);
+            mac_src = bytes(11:16);
+            ret{count}.MAC_Src = sprintf('%02X:%02X:%02X:%02X:%02X:%02X',mac_src);
+            ret{count}.MAC_Des = sprintf('%02X:%02X:%02X:%02X:%02X:%02X',mac_des);
         end
         cur = cur + field_len - 1;
         continue;
