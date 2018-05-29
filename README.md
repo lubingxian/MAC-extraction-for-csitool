@@ -37,6 +37,7 @@ csi_entry =
 * https://github.com/dhalperi/linux-80211n-csitool-supplementary/issues/101
 
 # Contact
+[Bingxian Lu](https://lubingxian.cn)   
 Email: bingxian.lu@gmail.com
 
 To cite this work, the best reference is our paper published in IEEE SECON 2016:
